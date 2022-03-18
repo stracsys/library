@@ -35,6 +35,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'tailwind',
+    os.getenv('TAILWIND_APP_NAME'),
+    'django_browser_reload',
+    'libshare.apps.LibshareConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,6 +48,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'django_browser_reload.middleware.BrowserReloadMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -130,3 +135,9 @@ STATIC_URL = os.getenv('STATIC_URL')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = os.getenv('DEFAULT_AUTO_FIELD')
+
+TAILWIND_APP_NAME = os.getenv('TAILWIND_APP_NAME')
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+]

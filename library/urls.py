@@ -24,4 +24,5 @@ load_dotenv()
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(os.getenv('HOME_URLCONF'))),
+    path("__reload__/", include("django_browser_reload.urls")),
 ]
