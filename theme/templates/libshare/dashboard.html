@@ -1,0 +1,166 @@
+{% extends 'libshare/full_base.html' %}
+{% load static %}
+
+{% block 'title' %}Dashboard{% endblock %}
+
+{% block 'content' %}
+<main>
+  <div class="flex flex-col lg:flex-row lg:justify-between">
+
+    <div class="flex flex-col gap-5 lg:hidden">
+      <ul class="flex gap-2 flex-wrap p-2 justify-between sm:justify-start text-black dark:text-slate-400">
+        <li>
+          <button
+            class="btn-epreuves py-3 px-4 text-sm font-medium text-center rounded-lg bg-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white">Epreuves
+          </button>
+        </li>
+        <li>
+          <button
+            class="btn-mes-epreuves py-3 px-4 text-sm font-medium text-center rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white">Mes
+            epreuves
+          </button>
+        </li>
+        <li>
+          <button id="ajout"
+            class="py-3 px-4 text-sm font-medium text-center rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white">Ajout
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="hidden h-[75vh] rounded-tr-lg rounded-br-lg lg:flex flex-col justify-around bg-[#B95252] dark:bg-slate-900">
+      <div class="text-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-72 w-72" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+          stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+        </svg>
+        USER NAME
+      </div>
+      <div class="text-center">
+        <ul class="flex flex-col gap-2 text-black dark:text-slate-400">
+          <li>
+            <button
+              class="btn-epreuves w-full py-3 px-4 text-sm font-medium text-center bg-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white">Epreuves
+            </button>
+          </li>
+          <li>
+            <button
+              class="btn-mes-epreuves w-full py-3 px-4 text-sm font-medium text-center hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white">Mes
+              epreuves
+            </button>
+          </li>
+          <li>
+            <button id="ajout"
+              class="py-3 px-4 w-full text-sm font-medium text-center hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white">Ajout
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="epreuves"
+      class="grid gap-5 mx-5 grid-cols-1 md:grid-cols-2 xl:grid-cols-4 justify-items-center max-h-[75vh] overflow-auto">
+      <div class="p-6 bg-[#B95252] sm:rounded-lg shadow-md dark:bg-slate-900 h-fit">
+        <div class="flex flex-col gap-2 max-w-sm">
+          <iframe src="../corrections/correction.pdf" class="max-w-sm h-52 overflow-clip"></iframe>
+          <span class="h-8 overflow-clip text-2xl font-bold tracking-tight">NOM</span>
+          <span class="h-6 overflow-clip">Attribut 1</span>
+          <span class="h-6 overflow-clip">Attribut 2</span>
+          <a href="../corrections/correction.pdf" class="mx-auto btn-blue">Telecharger</a>
+        </div>
+      </div>
+      <div class="p-6 bg-[#B95252] sm:rounded-lg shadow-md dark:bg-slate-900 h-fit">
+        <div class="flex flex-col gap-2 max-w-sm">
+          <iframe src="../corrections/correction.pdf" class="max-w-sm h-52 overflow-clip"></iframe>
+          <span class="h-8 overflow-clip text-2xl font-bold tracking-tight">NOM</span>
+          <span class="h-6 overflow-clip">Attribut 1</span>
+          <span class="h-6 overflow-clip">Attribut 2</span>
+          <a href="../corrections/correction.pdf" class="mx-auto btn-blue">Telecharger</a>
+        </div>
+      </div>
+      <div class="p-6 bg-[#B95252] sm:rounded-lg shadow-md dark:bg-slate-900 h-fit">
+        <div class="flex flex-col gap-2 max-w-sm">
+          <iframe src="../corrections/correction.pdf" class="max-w-sm h-52 overflow-clip"></iframe>
+          <span class="h-8 overflow-clip text-2xl font-bold tracking-tight">NOM</span>
+          <span class="h-6 overflow-clip">Attribut 1</span>
+          <span class="h-6 overflow-clip">Attribut 2</span>
+          <a href="../corrections/correction.pdf" class="mx-auto btn-blue">Telecharger</a>
+        </div>
+      </div>
+      <div class="p-6 bg-[#B95252] sm:rounded-lg shadow-md dark:bg-slate-900 h-fit">
+        <div class="flex flex-col gap-2 max-w-sm">
+          <iframe src="../corrections/correction.pdf" class="max-w-sm h-52 overflow-clip"></iframe>
+          <span class="h-8 overflow-clip text-2xl font-bold tracking-tight">NOM</span>
+          <span class="h-6 overflow-clip">Attribut 1</span>
+          <span class="h-6 overflow-clip">Attribut 2</span>
+          <a href="../corrections/correction.pdf" class="mx-auto btn-blue">Telecharger</a>
+        </div>
+      </div>
+      <div class="p-6 bg-[#B95252] sm:rounded-lg shadow-md dark:bg-slate-900 h-fit">
+        <div class="flex flex-col gap-2 max-w-sm">
+          <iframe src="../corrections/correction.pdf" class="max-w-sm h-52 overflow-clip"></iframe>
+          <span class="h-8 overflow-clip text-2xl font-bold tracking-tight">NOM</span>
+          <span class="h-6 overflow-clip">Attribut 1</span>
+          <span class="h-6 overflow-clip">Attribut 2</span>
+          <a href="../corrections/correction.pdf" class="mx-auto btn-blue">Telecharger</a>
+        </div>
+      </div>
+      <div class="p-6 bg-[#B95252] sm:rounded-lg shadow-md dark:bg-slate-900 h-fit">
+        <div class="flex flex-col gap-2 max-w-sm">
+          <iframe src="../corrections/correction.pdf" class="max-w-sm h-52 overflow-clip"></iframe>
+          <span class="h-8 overflow-clip text-2xl font-bold tracking-tight">NOM</span>
+          <span class="h-6 overflow-clip">Attribut 1</span>
+          <span class="h-6 overflow-clip">Attribut 2</span>
+          <a href="../corrections/correction.pdf" class="mx-auto btn-blue">Telecharger</a>
+        </div>
+      </div>
+      <div class="p-6 bg-[#B95252] sm:rounded-lg shadow-md dark:bg-slate-900 h-fit">
+        <div class="flex flex-col gap-2 max-w-sm">
+          <iframe src="../corrections/correction.pdf" class="max-w-sm h-52 overflow-clip"></iframe>
+          <span class="h-8 overflow-clip text-2xl font-bold tracking-tight">NOM</span>
+          <span class="h-6 overflow-clip">Attribut 1</span>
+          <span class="h-6 overflow-clip">Attribut 2</span>
+          <a href="../corrections/correction.pdf" class="mx-auto btn-blue">Telecharger</a>
+        </div>
+      </div>
+      <div class="p-6 bg-[#B95252] sm:rounded-lg shadow-md dark:bg-slate-900 h-fit">
+        <div class="flex flex-col gap-2 max-w-sm">
+          <iframe src="../corrections/correction.pdf" class="max-w-sm h-52 overflow-clip"></iframe>
+          <span class="h-8 overflow-clip text-2xl font-bold tracking-tight">NOM</span>
+          <span class="h-6 overflow-clip">Attribut 1</span>
+          <span class="h-6 overflow-clip">Attribut 2</span>
+          <a href="../corrections/correction.pdf" class="mx-auto btn-blue">Telecharger</a>
+        </div>
+      </div>
+      <div class="p-6 bg-[#B95252] sm:rounded-lg shadow-md dark:bg-slate-900 h-fit">
+        <div class="flex flex-col gap-2 max-w-sm">
+          <iframe src="../corrections/correction.pdf" class="max-w-sm h-52 overflow-clip"></iframe>
+          <span class="h-8 overflow-clip text-2xl font-bold tracking-tight">NOM</span>
+          <span class="h-6 overflow-clip">Attribut 1</span>
+          <span class="h-6 overflow-clip">Attribut 2</span>
+          <a href="../corrections/correction.pdf" class="mx-auto btn-blue">Telecharger</a>
+        </div>
+      </div>
+    </div>
+    <div id="mes-epreuves"
+      class="hidden gap-5 mx-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-h-[75vh] justify-items-center overflow-auto">
+      <div class="p-6 bg-[#B95252] sm:rounded-lg shadow-md dark:bg-slate-900 h-fit">
+        <div class="flex flex-col gap-2 max-w-sm">
+          <iframe src="../corrections/correction.pdf" class="max-w-sm h-52"></iframe>
+          <span class="h-8 overflow-clip text-2xl font-bold tracking-tight">NOM</span>
+          <span class="h-6 overflow-clip">Attribut 1</span>
+          <span class="h-6 overflow-clip">Attribut 2</span>
+          <div class="flex justify-between">
+            <a href="../corrections/correction.pdf" class="btn-blue">Telecharger</a>
+            <a class="btn-red">Supprimer</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}
+
+{% block 'js' %}
+<script src="{% static 'libshare/js/dashboard.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,89 @@
+{% extends 'libshare/base.html' %}
+{% load static %}
+
+{% block 'title' %}Inscription{% endblock %}
+
+{% block 'content' %}
+<main class="flex flex-col bg-[#CEA0A0] dark:bg-slate-900 lg:w-3/4 xl:w-1/2 shadow-md m-auto p-10 sm:rounded-3xl gap-5">
+  <div
+    class="text-2xl font-bold flex items-center justify-center gap-2 text-[#B95252] dark:text-slate-400 font-victor-italic">
+    <a href="{% url 'libshare:home' %}" class="flex gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd"
+          d="M10.496 2.132a1 1 0 00-.992 0l-7 4A1 1 0 003 8v7a1 1 0 100 2h14a1 1 0 100-2V8a1 1 0 00.496-1.868l-7-4zM6 9a1 1 0 00-1 1v3a1 1 0 102 0v-3a1 1 0 00-1-1zm3 1a1 1 0 012 0v3a1 1 0 11-2 0v-3zm5-1a1 1 0 00-1 1v3a1 1 0 102 0v-3a1 1 0 00-1-1z"
+          clip-rule="evenodd" />
+      </svg>
+      libshare
+    </a>
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 " viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd"
+        d="M10.293 15.707a1 1 0 010-1.414L14.586 10l-4.293-4.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z"
+        clip-rule="evenodd" />
+      <path fill-rule="evenodd"
+        d="M4.293 15.707a1 1 0 010-1.414L8.586 10 4.293 5.707a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z"
+        clip-rule="evenodd" />
+    </svg>
+    inscription
+  </div>
+  <form class="flex justify-around sm:text-2xl md:text-lg">
+    <div class="grid md:grid-cols-2 m-auto gap-5">
+      <div class="relative">
+        <input type="text" name="" id="prenom" placeholder="Prenom"
+          class="peer h-10 placeholder-transparent border-b-2 bg-transparent focus:outline-none border-white/50 focus:text-[#B95252] dark:focus:text-slate-500 dark:focus:border-slate-500 focus:border-[#B95252]">
+        <label for="prenom"
+          class="transition-all absolute left-0 -top-3.5 text-sm focus:text-[#B95252] block peer-placeholder-shown:text-base peer-placeholder-shown:text-white/50 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-[#B95252] dark:peer-focus:text-slate-500">Prenom</label>
+      </div>
+      <div class="relative">
+        <input type="text" name="" id="nom" placeholder="Nom"
+          class="peer h-10 placeholder-transparent border-b-2 bg-transparent focus:outline-none border-white/50 focus:text-[#B95252] dark:focus:text-slate-500 dark:focus:border-slate-500 focus:border-[#B95252]">
+        <label for="nom"
+          class="transition-all absolute left-0 -top-3.5 text-sm focus:text-[#B95252] block peer-placeholder-shown:text-base peer-placeholder-shown:text-white/50 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-[#B95252] dark:peer-focus:text-slate-500">Nom</label>
+      </div>
+      <div class="relative">
+        <input type="password" name="" id="password" placeholder="Mot de passe"
+          class="peer h-10 placeholder-transparent border-b-2 bg-transparent focus:outline-none border-white/50 focus:text-[#B95252] dark:focus:text-slate-500 dark:focus:border-slate-500 focus:border-[#B95252]">
+        <label for="password"
+          class="transition-all absolute left-0 -top-3.5 text-sm focus:text-[#B95252] block peer-placeholder-shown:text-base peer-placeholder-shown:text-white/50 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-[#B95252] dark:peer-focus:text-slate-500">Password</label>
+      </div>
+      <div class="relative">
+        <input type="password" name="" id="password2" placeholder="Confirmer password"
+          class="peer h-10 placeholder-transparent border-b-2 bg-transparent focus:outline-none border-white/50 focus:text-[#B95252] dark:focus:text-slate-500 dark:focus:border-slate-500 focus:border-[#B95252]">
+        <label for="password2"
+          class="transition-all absolute left-0 -top-3.5 text-sm focus:text-[#B95252] block peer-placeholder-shown:text-base peer-placeholder-shown:text-white/50 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-[#B95252] dark:peer-focus:text-slate-500">Confirmer
+          password</label>
+      </div>
+      <div class="relative">
+        <input type="number" name="" id="tel" placeholder="N°Tel"
+          class="peer h-10 placeholder-transparent border-b-2 bg-transparent focus:outline-none border-white/50 focus:text-[#B95252] dark:focus:text-slate-500 dark:focus:border-slate-500 focus:border-[#B95252]">
+        <label for="tel"
+          class="transition-all absolute left-0 -top-3.5 text-sm focus:text-[#B95252] block peer-placeholder-shown:text-base peer-placeholder-shown:text-white/50 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-[#B95252] dark:peer-focus:text-slate-500">N°Tel</label>
+      </div>
+      <div class="relative">
+        <input type="email" name="" id="email" placeholder="Email"
+          class="peer h-10 placeholder-transparent border-b-2 bg-transparent focus:outline-none border-white/50 focus:text-[#B95252] dark:focus:text-slate-500 dark:focus:border-slate-500 focus:border-[#B95252]">
+        <label for="email"
+          class="transition-all absolute left-0 -top-3.5 text-sm focus:text-[#B95252] block peer-placeholder-shown:text-base peer-placeholder-shown:text-white/50 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-[#B95252] dark:peer-focus:text-slate-500">Email</label>
+      </div>
+      <div class="relative">
+        <input type="text" name="" id="adresse" placeholder="Adresse"
+          class="peer h-10 placeholder-transparent border-b-2 bg-transparent focus:outline-none border-white/50 focus:text-[#B95252] dark:focus:text-slate-500 dark:focus:border-slate-500 focus:border-[#B95252]">
+        <label for="adresse"
+          class="transition-all absolute left-0 -top-3.5 text-sm focus:text-[#B95252] block peer-placeholder-shown:text-base peer-placeholder-shown:text-white/50 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-[#B95252] dark:peer-focus:text-slate-500">Adresse</label>
+      </div>
+      <div class="relative">
+        <select name="" id="ecole" aria-placeholder="Ecole"
+          class="w-full h-10 border-b-2 bg-transparent focus:outline-none border-white/50 focus:text-[#B95252] dark:focus:text-slate-500 dark:focus:border-slate-500 focus:border-[#B95252]">
+          <option value="yes">Etudiant de l'ESMT</option>
+          <option value="no">Autre</option>
+        </select>
+      </div>
+      <input type="submit" value="S'inscrire"
+        class="bg-[#B95252]/50 dark:bg-slate-700 dark:hover:bg-slate-800 mt-2 px-5 py-2.5 hover:bg-[#B95252] hover:rounded-xl transition-all md:col-span-2 md:w-1/2 md:mx-auto">
+    </div>
+    <img src="{% static 'libshare/img/inscription.jpg' %}" alt="registration"
+      class="w-56 h-56 hidden lg:inline rounded-3xl">
+    </div>
+  </form>
+</main>
+
+{% endblock %}

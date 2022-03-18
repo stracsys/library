@@ -1,0 +1,28 @@
+{% load static %}
+
+<footer class="bg-[#B95252] dark:bg-slate-900 mt-5 flex flex-col md:flex-row text-center md:justify-evenly p-4 gap-2">
+  <div class="flex flex-col">
+    <p class="text-2xl">
+      Rejoignez nous!
+    </p>
+    <div class="flex gap-3 justify-center">
+      <a href="#">
+        <img src="{% static 'libshare/img/instagram.png' %}" alt="Instagram logo" class="w-10 rounded-full">
+      </a>
+      <a href="#">
+        <img src="{% static 'libshare/img/facebook-logo.png' %}" alt="Facebook logo" class="w-10 rounded-full">
+      </a>
+      <a href="#">
+        <img src="{% static 'libshare/img/linkedin.png' %}" alt="LinkedIn logo" class="w-10 rounded-full">
+      </a>
+      <a href="#">
+        <img src="{% static 'libshare/img/twitter.png' %}" alt="Twitter logo" class="w-10">
+      </a>
+    </div>
+  </div>
+  <div class="flex items-center justify-center text-3xl gap-1">
+    libshare
+    <img src="{% static 'libshare/img/copyright-symbol.png' %}" alt="Copyright Symbol" class="w-5">
+    2022
+  </div>
+</footer>

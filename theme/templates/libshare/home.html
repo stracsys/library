@@ -1,8 +1,41 @@
-{% extends "libshare/base.html" %}
+{% extends "libshare/full_base.html" %}
+{% load static %}
 
-{% block 'body' %}
+{% block 'title' %}Accueil{% endblock %}
 
-<body>
-  <p class="text-red-500 font-victor-italic">Hello world</p>
-</body>
+{% block 'content' %}
+<main class="flex flex-col mt-5 sm:text-2xl">
+  <h1 class="text-4xl text-center w-full p-2 text-[#3C3737] dark:text-white font-black">BIENVENUE DANS
+    <span class="font-victor-italic">libshare</span>
+  </h1>
+
+  <div class="grid lg:grid-cols-2 xl:grid-cols-3 gap-5 p-5 w-full justify-items-center items-end text-justify">
+    <div class="w-80 sm:w-96">
+      <a href="" class="">
+        <p class="p-3 first-letter:text-4xl first-letter:font-bold">
+          Recherchez des épreuves pour vous entrainer.
+          Revoyez les corrections avec libshare.
+        </p>
+        <img src="{% static 'libshare/img/img-1.jpg' %}" alt="library" class="rounded-3xl w-80 sm:w-96">
+      </a>
+    </div>
+    <div class="w-80 sm:w-96">
+      <a href="" class="">
+        <p class="p-3 first-letter:text-4xl first-letter:font-bold">
+          Partagez vos epreuves et corrections à vos camarades en les mettant en ligne.
+        </p>
+        <img src="{% static 'libshare/img/img-2.png' %}" alt="share" class="rounded-3xl w-80 sm:w-96">
+      </a>
+    </div>
+    <div class="w-80 sm:w-96">
+      <a href="" class="">
+        <p class="p-3 first-letter:text-4xl first-letter:font-bold">
+          Plongez vous dans votre univers et depassez vos limites.
+        </p>
+        <img src="{% static 'libshare/img/img-3.jpg' %}" alt="books" class="rounded-3xl w-80 sm:w-96">
+      </a>
+    </div>
+  </div>
+</main>
+
 {% endblock %}

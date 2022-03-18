@@ -12,9 +12,14 @@
 </head>
 
 <body
-	class="antialias bg-[#B95252] dark:bg-slate-700 text-white dark:text-slate-400 flex flex-col justify-between min-h-screen">
+	class="antialias bg-[#CEA0A0] dark:bg-slate-700 text-white dark:text-slate-400 flex flex-col justify-between min-h-screen">
+	{% include 'libshare/header.html' %}
 	{% block 'content' %}{% endblock %}
+	{% include 'libshare/footer.html' %}
 	<script src="{% static 'libshare/js/global.js' %}"></script>
+	<script src="{% static 'libshare/js/theme.js' %}"></script>
+	<script src="{% static 'libshare/js/menu.js' %}"></script>
+	{% block 'js' %}{% endblock %}
 </body>
 
 </html>
